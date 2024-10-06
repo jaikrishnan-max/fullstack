@@ -1,0 +1,234 @@
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    max-width: 150px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.btn-admin {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-admin:hover {
+    background-color: #0056b3;
+}
+
+/* For mobile view */
+.menu-icon {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+    
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        margin-left: auto;
+    }
+    
+    header {
+        justify-content: space-between;
+    }
+}
+
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 5%;
+    background-color: #f0f8ff;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    color: #333;
+}
+
+.hero-text p {
+    margin: 20px 0;
+    font-size: 1.2rem;
+}
+
+.btn-book {
+    padding: 15px 30px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Specialties Section */
+.specialties {
+    padding: 40px 5%;
+    text-align: center;
+}
+
+.specialties h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.specialties-icons {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.specialty {
+    text-align: center;
+    width: 150px;
+}
+
+.specialty i {
+    font-size: 2.5rem;
+    color: #007BFF;
+}
+
+/* Doctors Section */
+.doctors {
+    padding: 40px 5%;
+}
+
+.doctor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.doctor-card {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.doctor-card img {
+    width: 200px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.doctor-card h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.doctor-card .available {
+    color: green;
+    font-weight: bold;
+}
+
+/* Add hover effect for doctor-card */
+.doctor-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Add hover effect for doctor image */
+.doctor-card:hover img {
+    transform: scale(1.1);
+}
+
+
+/* Footer */
+footer {
+    padding: 40px 5%;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-logo img {
+    width: 120px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    margin: 5px 0;
+}
+
+.footer-contact {
+    text-align: right;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .specialties-icons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-contact {
+        text-align: left;
+    }
+}
